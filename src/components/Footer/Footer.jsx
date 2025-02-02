@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         
         <p className="text-gray-300 text-sm">
-          © {new Date().getFullYear()} Preet. All rights reserved.
+          © {new Date().getFullYear()} Made with ♥️ by Preet.
         </p>
       </div>
     </footer>
