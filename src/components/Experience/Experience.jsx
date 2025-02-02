@@ -20,17 +20,17 @@ const Experience = () => {
               group-hover:opacity-50 transition duration-300'></div>
             <div className='relative p-6 bg-black/30 rounded-lg h-full'>
               <h1 className='text-xl md:text-2xl font-semibold text-cyan-400 mb-2'>
-                Cloud Engineer
+                DevOps Trainee
               </h1>
-              <p className='text-gray-300 italic mb-2'>XYZ Company</p>
-              <p className='text-gray-300 italic mb-4'>Jan 2022 - Present</p>
+              <p className='text-gray-300 italic mb-2'>QSpiders</p>
+              <p className='text-gray-300 italic mb-4'>Starting April 2025</p>
               <p className='text-gray-300 leading-relaxed'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae optio minima atque commodi.
+              Joining QSpiders as a DevOps Trainee to build expertise in automation, deployment pipelines, and cloud infrastructure, while contributing to efficient development and operations workflows.
               </p>
             </div>
           </div>
 
-          {/* Experience Item 2 */}
+          {/* Experience Item 2 
           <div className='group relative'>
             <div className='absolute -inset-0.5 bg-cyan-500/50 rounded-lg blur opacity-30 
               group-hover:opacity-50 transition duration-300'></div>
@@ -44,9 +44,9 @@ const Experience = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae optio minima atque commodi.
               </p>
             </div>
-          </div>
+          </div>*/}
 
-          {/* Experience Item 3 */}
+          {/* Experience Item 3 
           <div className='group relative'>
             <div className='absolute -inset-0.5 bg-cyan-500/50 rounded-lg blur opacity-30 
               group-hover:opacity-50 transition duration-300'></div>
@@ -60,7 +60,7 @@ const Experience = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae optio minima atque commodi.
               </p>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
     </div>

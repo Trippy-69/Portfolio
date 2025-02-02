@@ -31,9 +31,20 @@ const About = () => {
               <div className='absolute -inset-0.5 bg-cyan-500/50 rounded-lg blur opacity-30 
                 group-hover:opacity-50 transition duration-300'></div>
               <div className='relative p-4 bg-black/30 rounded-lg'>
+                <h1 className='text-xl md:text-2xl font-semibold text-cyan-400 mb-2'>DevOps</h1>
+                <p className='text-gray-300 leading-relaxed'>
+                I focus on streamlining development by fostering collaboration between dev and ops teams, automating workflows, and ensuring faster, more reliable software delivery.
+                </p>
+              </div>
+            </div>
+
+            <div className='group relative'>
+              <div className='absolute -inset-0.5 bg-cyan-500/50 rounded-lg blur opacity-30 
+                group-hover:opacity-50 transition duration-300'></div>
+              <div className='relative p-4 bg-black/30 rounded-lg'>
                 <h1 className='text-xl md:text-2xl font-semibold text-cyan-400 mb-2'>Cloud</h1>
                 <p className='text-gray-300 leading-relaxed'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae optio minima atque commodi.
+                Experienced in working with Azure to build scalable, secure cloud infrastructures, automate deployments, and optimize resources for cloud-native applications.
                 </p>
               </div>
             </div>
@@ -44,18 +55,7 @@ const About = () => {
               <div className='relative p-4 bg-black/30 rounded-lg'>
                 <h1 className='text-xl md:text-2xl font-semibold text-cyan-400 mb-2'>Linux</h1>
                 <p className='text-gray-300 leading-relaxed'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae optio minima atque commodi.
-                </p>
-              </div>
-            </div>
-
-            <div className='group relative'>
-              <div className='absolute -inset-0.5 bg-cyan-500/50 rounded-lg blur opacity-30 
-                group-hover:opacity-50 transition duration-300'></div>
-              <div className='relative p-4 bg-black/30 rounded-lg'>
-                <h1 className='text-xl md:text-2xl font-semibold text-cyan-400 mb-2'>DevOps</h1>
-                <p className='text-gray-300 leading-relaxed'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae optio minima atque commodi.
+                Skilled in using Linux commands and basic shell scripting to automate tasks, manage servers, and optimize system performance in production environments.
                 </p>
               </div>
             </div>

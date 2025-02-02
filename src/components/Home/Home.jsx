@@ -12,10 +12,10 @@ const Home = () => {
         </h1>
         
         <p className="text-lg md:text-2xl text-gray-300 leading-relaxed md:leading-loose">
-          Cloud & DevOps Engineer passionate about building scalable solutions{" "}
-          <span className="hidden md:inline">and</span> optimizing infrastructure{" "}
+        Aspiring DevOps Engineer with a strong interest in cloud infrastructure, passionate about building scalable solutions{" "}
+          <span className="hidden md:inline"></span> optimizing systems and striving for peak{" "}
           <br className="md:hidden" />
-          <span className="md:hidden">and </span>for peak performance.
+          <span className="md:hidden"> </span>   performance.
         </p>
 
         <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">

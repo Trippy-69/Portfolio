@@ -3,29 +3,14 @@ import React, { useState } from 'react';
 const Projects = () => {
   const projects = [
     {
-      title: "Cloud Deployment Tool",
-      description: "A tool for automating cloud infrastructure deployment using Terraform and AWS.",
-      githubLink: "https://github.com/yourusername/cloud-deployment-tool",
+      title: "Moodify App",
+      description: "Application which will play music according to the user's mood",
+      githubLink: "https://github.com/Trippy-69/Moodify-react-app", // Updated for the first project
     },
     {
       title: "DevOps Pipeline",
-      description: "A CI/CD pipeline for automating software delivery using Jenkins and Docker.",
-      githubLink: "https://github.com/yourusername/devops-pipeline",
-    },
-    {
-      title: "Linux Monitoring System",
-      description: "A system for monitoring Linux servers and applications in real-time.",
-      githubLink: "https://github.com/yourusername/linux-monitoring",
-    },
-    {
-      title: "Project 4",
-      description: "A sample project to test scrolling navigation.",
-      githubLink: "https://github.com/yourusername/project-4",
-    },
-    {
-      title: "Project 5",
-      description: "Another sample project to test scrolling navigation.",
-      githubLink: "https://github.com/yourusername/project-5",
+      description: "A CI/CD pipeline for ToDo App automating software delivery using Jenkins and Docker.",
+      githubLink: "https://github.com/Trippy-69", // Updated for the second project
     },
   ];
 
@@ -83,7 +68,8 @@ const Projects = () => {
         <div className="relative flex justify-center items-center">
           {/* Background Projects (Blurred) */}
           <div className="absolute grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transform scale-95 opacity-50 blur-lg transition-all duration-500 z-10">
-            {projects.map((project, index) => (
+            {/* Only render the first two projects */}
+            {projects.slice(0, 2).map((project, index) => (
               <div key={index} className={`transition-all ${index !== visibleIndex ? 'scale-90 opacity-50' : ''}`}>
                 <div className='relative p-6 bg-black/30 rounded-lg min-h-[300px] flex flex-col'>
                   <h1 className='text-xl md:text-2xl font-semibold text-cyan-400 mb-2'>
