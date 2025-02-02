@@ -27,13 +27,21 @@ const Home = () => {
 
           {/* Social Media Logos */}
           <div className="flex gap-6 items-center mt-4 md:mt-0" style={{ transform: 'translateY(10px)' }}> {/* Increased translateY */}
-            <a href="https://github.com" className="text-gray-300 hover:text-cyan-400 transition-all">
+            {/* GitHub Link */}
+            <a href="https://github.com/Trippy-69" target="_blank" rel="noopener noreferrer" 
+              className="text-gray-300 hover:text-cyan-400 transition-all">
               <RiGithubFill size={24} className="hover:scale-110 transition-transform duration-300" />
             </a>
-            <a href="https://linkedin.com" className="text-gray-300 hover:text-cyan-400 transition-all">
+            
+            {/* LinkedIn Link */}
+            <a href="https://www.linkedin.com/in/preetkumargupta" target="_blank" rel="noopener noreferrer" 
+              className="text-gray-300 hover:text-cyan-400 transition-all">
               <RiLinkedinFill size={24} className="hover:scale-110 transition-transform duration-300" />
             </a>
-            <a href="mailto:youremail@example.com" className="text-gray-300 hover:text-cyan-400 transition-all">
+            
+            {/* Mail Link */}
+            <a href="mailto:preetgupta2002@outlook.com?subject=Contacting%20through%20your%20website&body=Hi%20Preet," 
+              className="text-gray-300 hover:text-cyan-400 transition-all">
               <RiMailFill size={24} className="hover:scale-110 transition-transform duration-300" />
             </a>
           </div>
