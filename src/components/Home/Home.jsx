@@ -1,5 +1,5 @@
-import React from 'react'
-import infinite from '../assets/infinite.avif';
+import React from 'react';
+import infinite from '../assets/infinite.avif'; // Keep the image as is
 
 const Home = () => {
   return (
@@ -11,17 +11,20 @@ const Home = () => {
         </h1>
         
         <p className="text-lg md:text-2xl text-gray-300 leading-relaxed md:leading-loose">
-  Cloud & DevOps Engineer passionate about building scalable solutions{" "}
-  <span className="hidden md:inline">and</span> optimizing infrastructure{" "}
-  <br className="md:hidden" />
-  <span className="md:hidden">and </span>for peak performance.
-</p>
+          Cloud & DevOps Engineer passionate about building scalable solutions{" "}
+          <span className="hidden md:inline">and</span> optimizing infrastructure{" "}
+          <br className="md:hidden" />
+          <span className="md:hidden">and </span>for peak performance.
+        </p>
 
-        <button className="w-fit bg-[#465697] hover:bg-[#3a487f] text-white py-3 px-8 
-          rounded-full text-lg font-semibold transition-all duration-300 
-          hover:scale-105 shadow-lg transform">
-          Download Resume
-        </button>
+        {/* Download Resume Button */}
+        <a href="/assets/resume.pdf" download="Preet_Resume.pdf"> {/* File is now in the public folder */}
+          <button className="w-fit bg-[#465697] hover:bg-[#3a487f] text-white py-3 px-8 
+            rounded-full text-lg font-semibold transition-all duration-300 
+            hover:scale-105 shadow-lg transform">
+            Download Resume
+          </button>
+        </a>
       </div>
 
       {/* Image Container */}
@@ -39,4 +42,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
