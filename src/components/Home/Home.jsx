@@ -19,11 +19,14 @@ const Home = () => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
-          <button className="w-fit bg-[#465697] hover:bg-[#3a487f] text-white py-3 px-8 
-            rounded-full text-lg font-semibold transition-all duration-300 
-            hover:scale-105 shadow-lg transform">
-            Download Resume
-          </button>
+          {/* Download Resume Button */}
+          <a href="/Preet_Resume.pdf" download>
+            <button className="w-fit bg-[#465697] hover:bg-[#3a487f] text-white py-3 px-8 
+              rounded-full text-lg font-semibold transition-all duration-300 
+              hover:scale-105 shadow-lg transform">
+              Download Resume
+            </button>
+          </a>
 
           {/* Social Media Logos */}
           <div className="flex gap-6 items-center mt-4 md:mt-0" style={{ transform: 'translateY(10px)' }}> {/* Increased translateY */}
