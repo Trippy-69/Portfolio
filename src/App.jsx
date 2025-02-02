@@ -8,15 +8,15 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-  <div className="bg-black h-auto w-full overflow-hidden">
-    <Navbar/>
-    <Home/>
-    <About/>
-    <Experience/> 
-    <Projects/>
-    <Contact/>
-    <Footer/>
-  </div>
+    <div className="bg-black h-auto w-full overflow-hidden">
+      <Navbar />
+      <div id="home"><Home /></div>
+      <div id="about"><About /></div>
+      <div id="experience"><Experience /></div>
+      <div id="projects"><Projects /></div>
+      <div id="contact"><Contact /></div>
+      <Footer />
+    </div>
   );
 }
 
