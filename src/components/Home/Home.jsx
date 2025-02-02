@@ -1,5 +1,6 @@
-import React from 'react';
-import infinite from '../assets/infinite.avif'; // Keep the image as is
+import React from 'react'
+import infinite from '../assets/infinite.avif'
+import { RiGithubFill, RiLinkedinFill, RiMailFill } from '@remixicon/react'
 
 const Home = () => {
   return (
@@ -17,14 +18,24 @@ const Home = () => {
           <span className="md:hidden">and </span>for peak performance.
         </p>
 
-        {/* Download Resume Button */}
-        <a href="/assets/resume.pdf" download="Preet_Resume.pdf"> {/* File is now in the public folder */}
-          <button className="w-fit bg-[#465697] hover:bg-[#3a487f] text-white py-3 px-8 
-            rounded-full text-lg font-semibold transition-all duration-300 
-            hover:scale-105 shadow-lg transform">
-            Download Resume
-          </button>
-        </a>
+        <button className="w-fit bg-[#465697] hover:bg-[#3a487f] text-white py-3 px-8 
+          rounded-full text-lg font-semibold transition-all duration-300 
+          hover:scale-105 shadow-lg transform">
+          Download Resume
+        </button>
+        
+        {/* Social Media Logos */}
+        <div className="flex gap-6 mt-8">
+          <a href="https://github.com" className="text-gray-300 hover:text-cyan-400 transition-all">
+            <RiGithubFill size={24} className="hover:scale-110 transition-transform duration-300" />
+          </a>
+          <a href="https://linkedin.com" className="text-gray-300 hover:text-cyan-400 transition-all">
+            <RiLinkedinFill size={24} className="hover:scale-110 transition-transform duration-300" />
+          </a>
+          <a href="mailto:youremail@example.com" className="text-gray-300 hover:text-cyan-400 transition-all">
+            <RiMailFill size={24} className="hover:scale-110 transition-transform duration-300" />
+          </a>
+        </div>
       </div>
 
       {/* Image Container */}
@@ -42,4 +53,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Home
