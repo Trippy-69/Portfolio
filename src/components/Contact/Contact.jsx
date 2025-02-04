@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -23,45 +23,50 @@ const Contact = () => {
         },
         (error) => {
           console.error('Failed to send email:', error.text);
-          setMessage({ text: 'Failed to send message. Please try again.', type: 'error' });
+          setMessage({ text: 'Failed to send message. Please try again!', type: 'error' });
         }
       );
   };
 
+  useEffect(() => {
+    if (message.text) {
+      const timer = setTimeout(() => {
+        setMessage({ text: '', type: '' });
+      }, 3000); // Message disappears after 3 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
+
   return (
-    <section className="text-white px-6 md:px-20 py-16 relative" id="contact">
+    <section className="text-white px-6 md:px-20 py-12 relative" id="contact">
       {/* Background blur effect */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-md rounded-xl z-0"></div>
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-cyan-400 text-center neon-text">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-cyan-400 text-center neon-text">
           Contact
         </h2>
 
-        {/* Success/Error Message */}
-        {message.text && (
-          <div
-            className={`p-4 mb-6 rounded-lg text-center ${
-              message.type === 'success'
-                ? 'bg-green-500/20 border border-green-500/40'
-                : 'bg-red-500/20 border border-red-500/40'
-            }`}
-          >
-            <p
-              className={`${
-                message.type === 'success' ? 'text-green-400' : 'text-red-400'
+        {/* Success/Error Message - Fixed height to prevent shifting */}
+        <div className="h-12 flex items-center justify-center mb-2">
+          {message.text && (
+            <div
+              className={`p-3 rounded-lg text-center transition-opacity duration-300 ease-in-out ${
+                message.type === 'success'
+                  ? 'bg-green-500/20 border border-green-500/40 text-green-400'
+                  : 'bg-red-500/20 border border-red-500/40 text-red-400'
               }`}
             >
               {message.text}
-            </p>
-          </div>
-        )}
+            </div>
+          )}
+        </div>
 
-        <form ref={form} onSubmit={sendEmail} className="space-y-6">
+        <form ref={form} onSubmit={sendEmail} className="space-y-4">
           <div>
             <input
               type="text"
-              name="user_name" // Required for EmailJS
+              name="user_name" // Corrected for EmailJS
               placeholder="Name"
               className="w-full p-4 bg-black/30 backdrop-blur-sm border border-cyan-400/20
               rounded-lg focus:border-cyan-400/40 focus:outline-none focus:ring-1 focus:ring-cyan-400/30
@@ -73,7 +78,7 @@ const Contact = () => {
           <div>
             <input
               type="email"
-              name="user_email" // Required for EmailJS
+              name="user_email" // Corrected for EmailJS
               placeholder="Email"
               className="w-full p-4 bg-black/30 backdrop-blur-sm border border-cyan-400/20
               rounded-lg focus:border-cyan-400/40 focus:outline-none focus:ring-1 focus:ring-cyan-400/30
@@ -84,7 +89,7 @@ const Contact = () => {
 
           <div>
             <textarea
-              name="message" // Required for EmailJS
+              name="message" 
               placeholder="Message"
               rows="5"
               className="w-full p-4 bg-black/30 backdrop-blur-sm border border-cyan-400/20
