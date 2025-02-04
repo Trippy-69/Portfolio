@@ -66,8 +66,8 @@ const Home = () => {
         </div>
 
         {/* Image Container for Mobile */}
-        <div className="md:hidden flex items-center justify-center mt-4"> {/* Adjusted margin-top */}
-          <div className="relative w-[200px] h-[200px]">
+        <div className="md:hidden flex items-center justify-center mt-2 w-full"> {/* Adjusted margin-top to mt-2 */}
+          <div className="relative w-[300px] h-[300px]"> {/* Restored original size */}
             <img
               className="w-full h-full object-contain animate-float"
               src={infinite}

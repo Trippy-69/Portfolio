@@ -5,12 +5,12 @@ const Projects = () => {
     {
       title: "Moodify App",
       description: "Application which will play music according to the user's mood",
-      githubLink: "https://github.com/Trippy-69/Moodify-react-app", // Updated for the first project
+      githubLink: "https://github.com/Trippy-69/Moodify-react-app",
     },
     {
       title: "DevOps Pipeline",
       description: "A CI/CD pipeline for ToDo App automating software delivery using Jenkins and Docker.",
-      githubLink: "https://github.com/Trippy-69", // Updated for the second project
+      githubLink: "https://github.com/Trippy-69",
     },
   ];
 
@@ -42,10 +42,10 @@ const Projects = () => {
         </h2>
 
         {/* Navigation Buttons */}
-        <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30">
+        <div className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 z-30">
           <button
             onClick={handlePrev}
-            className="text-white text-4xl p-5 rounded-full bg-cyan-500 hover:bg-cyan-600 transition duration-300 ease-in-out
+            className="text-white text-xl md:text-4xl p-2 md:p-5 rounded-full bg-cyan-500 hover:bg-cyan-600 transition duration-300 ease-in-out
               shadow-lg hover:shadow-xl disabled:opacity-50"
             disabled={visibleIndex === 0}
           >
@@ -53,10 +53,10 @@ const Projects = () => {
           </button>
         </div>
 
-        <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30">
+        <div className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 z-30">
           <button
             onClick={handleNext}
-            className="text-white text-4xl p-5 rounded-full bg-cyan-500 hover:bg-cyan-600 transition duration-300 ease-in-out
+            className="text-white text-xl md:text-4xl p-2 md:p-5 rounded-full bg-cyan-500 hover:bg-cyan-600 transition duration-300 ease-in-out
               shadow-lg hover:shadow-xl disabled:opacity-50"
             disabled={visibleIndex === projects.length - 1}
           >
