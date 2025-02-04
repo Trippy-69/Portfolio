@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
+  const [message, setMessage] = useState({ text: '', type: '' }); // State for success/error messages
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,12 +18,12 @@ const Contact = () => {
       .then(
         (result) => {
           console.log('Email sent successfully!', result.text);
-          alert('Message sent successfully!');
+          setMessage({ text: 'Message sent successfully!', type: 'success' });
           form.current.reset(); // Reset the form after sending
         },
         (error) => {
           console.error('Failed to send email:', error.text);
-          alert('Failed to send message. Please try again.');
+          setMessage({ text: 'Failed to send message. Please try again.', type: 'error' });
         }
       );
   };
@@ -36,6 +37,25 @@ const Contact = () => {
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-cyan-400 text-center neon-text">
           Contact
         </h2>
+
+        {/* Success/Error Message */}
+        {message.text && (
+          <div
+            className={`p-4 mb-6 rounded-lg text-center ${
+              message.type === 'success'
+                ? 'bg-green-500/20 border border-green-500/40'
+                : 'bg-red-500/20 border border-red-500/40'
+            }`}
+          >
+            <p
+              className={`${
+                message.type === 'success' ? 'text-green-400' : 'text-red-400'
+              }`}
+            >
+              {message.text}
+            </p>
+          </div>
+        )}
 
         <form ref={form} onSubmit={sendEmail} className="space-y-6">
           <div>
