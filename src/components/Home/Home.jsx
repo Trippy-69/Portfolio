@@ -13,9 +13,9 @@ const Home = () => {
 
         <p className="text-lg md:text-2xl text-gray-300 leading-relaxed md:leading-loose">
           Aspiring DevOps Engineer with a strong interest in cloud infrastructure, passionate about building scalable solutions{' '}
-          <span className="hidden md:inline"></span> optimizing systems and striving for peak{' '}
+          <span className="hidden md:inline"></span> optimizing systems and striving for peak performance.{' '}
           <br className="md:hidden" />
-          <span className="md:hidden"> </span> performance.
+          <span className="md:hidden"> </span> 
         </p>
 
         <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
@@ -64,11 +64,23 @@ const Home = () => {
             </a>
           </div>
         </div>
+
+        {/* Image Container for Mobile */}
+        <div className="md:hidden flex items-center justify-center mt-4"> {/* Adjusted margin-top */}
+          <div className="relative w-[200px] h-[200px]">
+            <img
+              className="w-full h-full object-contain animate-float"
+              src={infinite}
+              alt="Cloud Infrastructure"
+            />
+            <div className="absolute inset-0 bg-[#465697] opacity-10 blur-3xl rounded-full -z-10" />
+          </div>
+        </div>
       </div>
 
-      {/* Image Container */}
-      <div className="md:w-1/2 flex items-center justify-center order-first md:order-none">
-        <div className="relative w-[200px] h-[200px] md:w-[400px] md:h-[400px]">
+      {/* Image Container for Desktop */}
+      <div className="hidden md:flex md:w-1/2 items-center justify-center">
+        <div className="relative w-[400px] h-[400px]">
           <img
             className="w-full h-full object-contain animate-float"
             src={infinite}
