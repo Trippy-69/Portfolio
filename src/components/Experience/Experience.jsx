@@ -14,7 +14,7 @@ const Experience = () => {
 
         {/* Grid Layout for Experience Items */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {/* Experience Item 1 }
+          {/* Experience Item 1*/ }
           <div className='group relative'>
             <div className='absolute -inset-0.5 bg-cyan-500/50 rounded-lg blur opacity-30 
               group-hover:opacity-50 transition duration-300'></div>
