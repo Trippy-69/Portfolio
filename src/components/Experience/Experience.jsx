@@ -25,7 +25,7 @@ const Experience = () => {
               <p className='text-gray-300 italic mb-2'>QSpiders</p>
               <p className='text-gray-300 italic mb-4'>Starting April 2025</p>
               <p className='text-gray-300 leading-relaxed'>
-              Joining QSpiders as a DevOps Trainee to build expertise in automation, deployment pipelines, and cloud infrastructure, while contributing to efficient development and operations workflows.
+              Joining QSpiders as a Java Full Stack Trainee to build expertise in front-end and back-end development, while contributing to the creation of robust and scalable web applications.
               </p>
             </div>
           </div>
